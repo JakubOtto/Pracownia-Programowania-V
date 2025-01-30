@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+$body-bg: black;
+$body-color: white;
+$primary-color: red;
+@use 'sass:color';
+
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
+body {
+  background-color: black;
+  color: $body-color;
+
+  .d-flex {
+    form {
+      .last-element label {
+        background-color: $primary-color;
+      }
+      .first-element label {
+        background-color: black;
+      }
+
+      .form-control {
+        background-color: $body-bg;
+        color: $body-color;
+        border: 1px solid $primary-color;
+
+        &::placeholder {
+          color: color.scale($body-color, $lightness: 30%);
+        }
+      }
+
+      .form-select {
+        background-color: $body-bg;
+        color: $body-color;
+        border: 1px solid $primary-color;
+      }
+
+      .form-check-input {
+        background-color: $body-bg;
+        border: 1px solid $primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let entry of entries">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">
+            Customer Information for {{ entry.customer.firstName }}
+            {{ entry.customer.secondName }}
+          </h5>
+          <p class="card-text">
+            <strong>Email:</strong> {{ entry.customer.email }}
+          </p>
+          <p class="card-text">
+            <strong>Address:</strong> {{ entry.customer.getAddress() }}
+          </p>
+
+          <div *ngIf="entry.invoice">
+            <h6 class="card-subtitle mb-2 text-muted">Invoice Information</h6>
+            <p class="card-text">
+              <strong>Invoice Number:</strong> {{ entry.invoice.invoiceNumber }}
+            </p>
+            <p class="card-text">
+              <strong>Date:</strong> {{ entry.invoice.date }}
+            </p>
+            <p class="card-text">
+              <strong>Amount:</strong> {{ entry.invoice.amount }}
+            </p>
+            <p class="card-text">
+              <strong>Tax Rate:</strong> {{ entry.invoice.taxRate }}
+            </p>
+            <p class="card-text">
+              <strong>Payment Method:</strong> {{ entry.invoice.paymentMethod }}
+            </p>
+            <p class="card-text">
+              <strong>Paid:</strong> {{ entry.invoice.paid }}
+            </p>
+          </div>
+
+          <div *ngIf="entry.order">
+            <h6 class="card-subtitle mb-2 text-muted">Order Information</h6>
+            <p class="card-text">
+              <strong>Order Number:</strong> {{ entry.order.orderNumber }}
+            </p>
+            <p class="card-text">
+              <strong>Order Date:</strong> {{ entry.order.orderDate }}
+            </p>
+            <p class="card-text">
+              <strong>Shipping Address:</strong>
+              {{ entry.order.shippingAddress }}
+            </p>
+            <p class="card-text">
+              <strong>Total Amount:</strong> {{ entry.order.totalAmount }}
+            </p>
+            <p class="card-text">
+              <strong>Status:</strong> {{ entry.order.status }}
+            </p>
+            <p class="card-text">
+              <strong>Priority:</strong> {{ entry.order.priority }}
+            </p>
+          </div>
+
+          <button
+            (click)="deleteEntry(entry.customer.id)"
+            class="btn btn-danger mt-3">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

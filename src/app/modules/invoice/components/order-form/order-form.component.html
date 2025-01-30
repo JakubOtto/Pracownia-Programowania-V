@@ -1,0 +1,95 @@
+<div class="form-container">
+  <form (ngSubmit)="onSubmitForm(orderForm)" #orderForm="ngForm">
+    <div class="form-group">
+      <label for="orderNumber">Order Number</label>
+      <input
+        type="number"
+        class="form-control"
+        id="orderNumber"
+        name="orderNumber"
+        #orderNumber="ngModel"
+        [(ngModel)]="order.orderNumber"
+        required />
+      <div
+        class="alert alert-danger"
+        *ngIf="orderNumber.invalid && orderForm.submitted">
+        Pole nie moze byc puste
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="orderDate">Order Date</label>
+      <input
+        type="date"
+        class="form-control"
+        id="orderDate"
+        name="orderDate"
+        #orderDate="ngModel"
+        [(ngModel)]="order.orderDate"
+        required />
+      <div
+        class="alert alert-danger"
+        *ngIf="orderDate.invalid && orderForm.submitted">
+        Pole nie moze byc puste
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="shippingAddress">Shipping Address</label>
+      <input
+        type="text"
+        class="form-control"
+        id="shippingAddress"
+        name="shippingAddress"
+        #shippingAddress="ngModel"
+        [(ngModel)]="order.shippingAddress"
+        required />
+      <div
+        class="alert alert-danger"
+        *ngIf="shippingAddress.invalid && orderForm.submitted">
+        Pole nie moze byc puste
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="totalAmount">Total Amount</label>
+      <input
+        type="number"
+        class="form-control"
+        id="totalAmount"
+        name="totalAmount"
+        #amount="ngModel"
+        [(ngModel)]="order.totalAmount"
+        required />
+      <div
+        class="alert alert-danger"
+        *ngIf="amount.invalid && orderForm.submitted">
+        Pole nie moze byc puste
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select
+        class="form-control"
+        id="status"
+        name="status"
+        #status="ngModel"
+        [(ngModel)]="order.status"
+        required>
+        <option value="Pending">Pending</option>
+        <option value="Shipped">Shipped</option>
+      </select>
+      <div
+        class="alert alert-danger"
+        *ngIf="status.invalid && orderForm.submitted">
+        Pole nie moze byc puste
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="priority">Priority</label>
+      <input
+        type="checkbox"
+        id="priority"
+        name="priority"
+        [(ngModel)]="order.priority" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>

@@ -1,0 +1,174 @@
+<body>
+  <div id="customer-form" class="form-container">
+    <form (ngSubmit)="onSubmitForm(customerForm)" #customerForm="ngForm">
+      <div class="form-group">
+        <label for="inputFirstName">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputFirstName"
+          placeholder="First Name"
+          name="firstName"
+          #firstName="ngModel"
+          [(ngModel)]="customer.firstName"
+          required />
+        <div
+          class="alert alert-danger"
+          *ngIf="firstName.invalid && customerForm.submitted">
+          Pole nie może być puste
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputSecondName">Second Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputSecondName"
+          placeholder="Second Name"
+          name="secondName"
+          #secondName="ngModel"
+          [(ngModel)]="customer.secondName"
+          required />
+        <div
+          class="alert alert-danger"
+          *ngIf="secondName.invalid && customerForm.submitted">
+          Pole nie może być puste
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail">E-mail</label>
+        <input
+          type="email"
+          class="form-control"
+          id="inputEmail"
+          placeholder="E-mail"
+          name="email"
+          #email="ngModel"
+          [(ngModel)]="customer.email"
+          required
+          email />
+        <div
+          class="alert alert-danger"
+          *ngIf="email.invalid && customerForm.submitted">
+          Pole nie może być puste
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputCity">City</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputCity"
+          placeholder="City"
+          name="city"
+          #city="ngModel"
+          [(ngModel)]="customer.city"
+          required />
+        <div
+          class="alert alert-danger"
+          *ngIf="city.invalid && customerForm.submitted">
+          Pole nie może być puste
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputStreet">Street</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputStreet"
+          placeholder="Street"
+          name="street"
+          #street="ngModel"
+          [(ngModel)]="customer.street"
+          required />
+        <div
+          class="alert alert-danger"
+          *ngIf="street.invalid && customerForm.submitted">
+          Pole nie może być puste
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputHouseNumber">House number</label>
+        <input
+          type="number"
+          class="form-control"
+          id="inputHouseNumber"
+          placeholder="House Number"
+          name="houseNumber"
+          #houseNumber="ngModel"
+          [(ngModel)]="customer.houseNumber"
+          required />
+        <div
+          class="alert alert-danger"
+          *ngIf="houseNumber.invalid && customerForm.submitted">
+          Pole nie może być puste
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputFlatNumber">Flat number</label>
+        <input
+          type="number"
+          class="form-control"
+          id="inputFlatNumber"
+          placeholder="Flat Number"
+          name="flatNumber"
+          #flatNumber="ngModel"
+          [(ngModel)]="customer.flatNumber"
+          required />
+        <div
+          class="alert alert-danger"
+          *ngIf="flatNumber.invalid && customerForm.submitted">
+          Pole nie moze byc puste
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputZipCode">Zip Code</label>
+        <input
+          type="number"
+          class="form-control"
+          id="inputZipCode"
+          placeholder="Zip Code"
+          name="zipCode"
+          #zipCode="ngModel"
+          [(ngModel)]="customer.zipCode"
+          required />
+        <div
+          class="alert alert-danger"
+          *ngIf="zipCode.invalid && customerForm.submitted">
+          Pole nie może być puste
+        </div>
+      </div>
+      <div class="mb-3 form-check">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          name="active"
+          [(ngModel)]="customer.active"
+          id="active" />
+        <label class="form-check-label" for="active">Active</label>
+      </div>
+      <br />
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+  <div id="customers-list" style="display: none">
+    <h1>Customer List</h1>
+    <ul id="customers-list-data"></ul>
+    <ul id="customersAddress-list-data"></ul>
+  </div>
+  <br />
+  <button
+    onclick="showForm()"
+    class="btn btn-primary"
+    id="showFormButton"
+    style="display: none">
+    Go to Form
+  </button>
+  <button
+    onclick="showList()"
+    class="btn btn-primary"
+    id="showListButton"
+    style="display: none">
+    Go to List
+  </button>
+</body>

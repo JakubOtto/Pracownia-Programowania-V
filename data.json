@@ -1,0 +1,170 @@
+{
+  "customers": [
+    {
+      "id": "59a5",
+      "firstName": "a",
+      "secondName": "a",
+      "city": "a",
+      "email": "asd@asd.pl",
+      "street": "a",
+      "houseNumber": 0,
+      "flatNumber": 0,
+      "zipCode": 2,
+      "active": true
+    }
+  ],
+  "invoices": [
+    {
+      "id": "4e59",
+      "invoiceNumber": "1",
+      "date": "0001-01-01",
+      "customerName": "",
+      "amount": 1,
+      "taxRate": 1,
+      "paymentMethod": "Bank Transfer",
+      "paid": false
+    },
+    {
+      "id": "bc9e",
+      "invoiceNumber": "33",
+      "date": "0003-03-31",
+      "customerName": "",
+      "amount": 0,
+      "taxRate": 0,
+      "paymentMethod": "Bank Transfer",
+      "paid": false
+    },
+    {
+      "id": "6b48",
+      "invoiceNumber": "`",
+      "date": "0001-12-01",
+      "customerName": "",
+      "amount": 1,
+      "taxRate": 0,
+      "paymentMethod": "Bank Transfer",
+      "paid": false
+    },
+    {
+      "id": "b9ac",
+      "invoiceNumber": "a",
+      "date": "0001-01-01",
+      "customerName": "",
+      "amount": 0,
+      "taxRate": 0,
+      "paymentMethod": "Bank Transfer",
+      "paid": false
+    },
+    {
+      "id": "aa78",
+      "invoiceNumber": "a",
+      "date": "0001-01-01",
+      "customerName": "",
+      "amount": 0,
+      "taxRate": 0,
+      "paymentMethod": "Bank Transfer",
+      "paid": false
+    },
+    {
+      "id": "f255",
+      "invoiceNumber": 1,
+      "date": "0001-01-01",
+      "customerName": "",
+      "amount": 0,
+      "taxRate": 1,
+      "paymentMethod": "Credit Card",
+      "paid": false
+    },
+    {
+      "id": "62ab",
+      "invoiceNumber": 2,
+      "date": "0002-02-02",
+      "customerName": "",
+      "amount": 0,
+      "taxRate": 0,
+      "paymentMethod": "Bank Transfer",
+      "paid": false
+    }
+  ],
+  "orders": [
+    {
+      "id": "faf4",
+      "orderNumber": "1",
+      "customerName": "",
+      "orderDate": "0001-01-01",
+      "shippingAddress": "1",
+      "totalAmount": 0,
+      "status": "Shipped",
+      "priority": false
+    },
+    {
+      "id": "df6b",
+      "orderNumber": "1",
+      "customerName": "",
+      "orderDate": "0001-01-01",
+      "shippingAddress": "1",
+      "totalAmount": 0,
+      "status": "Shipped",
+      "priority": false
+    },
+    {
+      "id": "bf83",
+      "orderNumber": "33",
+      "customerName": "",
+      "orderDate": "0003-03-03",
+      "shippingAddress": "3",
+      "totalAmount": 3,
+      "status": "Shipped",
+      "priority": false
+    },
+    {
+      "id": "12bf",
+      "orderNumber": "1",
+      "customerName": "",
+      "orderDate": "0001-01-01",
+      "shippingAddress": "1",
+      "totalAmount": 1,
+      "status": "Pending",
+      "priority": false
+    },
+    {
+      "id": "f70d",
+      "orderNumber": "1",
+      "customerName": "",
+      "orderDate": "0001-01-01",
+      "shippingAddress": "1",
+      "totalAmount": 0,
+      "status": "Shipped",
+      "priority": false
+    },
+    {
+      "id": "3f33",
+      "orderNumber": "1",
+      "customerName": "",
+      "orderDate": "0001-01-01",
+      "shippingAddress": "1",
+      "totalAmount": 0,
+      "status": "Shipped",
+      "priority": false
+    },
+    {
+      "id": "7677",
+      "orderNumber": 1,
+      "customerName": "",
+      "orderDate": "0001-01-01",
+      "shippingAddress": "asd 12",
+      "totalAmount": 123,
+      "status": "Pending",
+      "priority": false
+    },
+    {
+      "id": "17d7",
+      "orderNumber": 1,
+      "customerName": "",
+      "orderDate": "0001-01-01",
+      "shippingAddress": "1",
+      "totalAmount": 0,
+      "status": "Pending",
+      "priority": false
+    }
+  ]
+}
